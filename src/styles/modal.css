@@ -1,0 +1,70 @@
+.modal__controller {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 90%;
+  border: transparent;
+  padding: 20px;
+  max-width: 420px;
+  border-radius: var(--radius-2);
+  animation-name: modalAnimation;
+  animation-duration: var(--animation-duration);
+  animation-timing-function: var(--animation-type);
+  transform-origin: top center;
+}
+
+@keyframes modalAnimation {
+  from {
+    transform: translate(-50%, -200%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+.modal__container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter__value {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.value {
+  border: 1px solid var(--color-grey-3);
+  border-radius: var(--radius-1);
+  padding: 10px;
+}
+
+.button__section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.button__separation {
+  display: flex;
+  justify-content: space-between;
+}
+
+#button__cancel {
+  width: 48%;
+}
+
+#button__insert {
+  width: 48%;
+}

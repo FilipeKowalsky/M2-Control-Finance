@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control Finance</title>
+    <link
+      rel="shortcut icon"
+      href="./src/assets/favicon.ico"
+      type="image/x-icon"
+    />
+    
+    <meta
+      name="description"
+      content="Control Finance - Seu controle financeiro"
+    />
+    <script src="https://kit.fontawesome.com/fb2208b0dd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./src/styles/globalStyles.css" />
+    <link rel="stylesheet" href="./src/styles/header.css" />
+    <link rel="stylesheet" href="./src/styles/section.css" />
+    <link rel="stylesheet" href="./src/styles/modal.css">
+    <link rel="stylesheet" href="./src/styles/media.css" />
+    <link rel="stylesheet" href="./src/styles/button.css" />
+    <link rel="stylesheet" href="./src/styles/text.css" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
+  </head>
+  <body>
+    <dialog class="modal__controller modal__animated">
+      <div class="modal__container">
+        <div class="modal__header"> 
+          <h2 class="title__secondary">Registro de valor</h2>
+          <button id="button__close">X</button>
+        </div>
+        <p class="text__secondary">Digite o valor e em seguida aperte no botão referente ao tipo do valor</p>
+        <div class="filter__value">
+          <h3 class="text__primary">Valor</h3>
+          <input class="value" type="text" placeholder="R$ 00,00">
+        </div>
+        <h3 class="text__primary">Tipo de valor</h3>
+        <div class="button__section">
+          <button id="deposit" class="button__outline">Entrada</button>
+          <button id="withdrawal" class="button__outline">Saída</button>
+        </div>
+        <div class="button__separation">
+          <button id="button__cancel" class="button__greylow">Cancelar</button>
+          <button id="button__insert" class="button__primary">Inserir Valor</button>
+        </div>
+      </div>
+    </dialog>
+    <header>
+      <div class="header__container">
+        <h1 class="title__primary"><span>Control</span> Finance</h1>
+        <div>
+          <button id="button__modal" class="button__primary">Registrar novo valor</button>
+        </div>  
+      </div>
+    </header>
+    <main id="app">  
+      <section class="finance__container">
+        <div class="filter__container">
+          <h2 class="title__secondary">Resumo financeiro</h2>
+          <div class="button__container">
+            <button id="button__all" class="button__outline">Todos</button>
+            <button id="button__deposit" class="button__outline">Entradas</button>
+            <button id="button__withdrawal" class="button__outline">Saídas</button>
+          </div>
+        </div>
+        <div class="result__container">
+          <h2 class="text__primary">Soma dos valores</h2>
+          <p id="value__total" class="text__primary">R$ 0,00</p>
+        </div>
+        <div class="empty__container">
+          <h2 class="title__secondary">Nenhum valor cadastrado!</h2>
+          <p class="text__primary">Registrar novo valor</p>
+        </div>
+        <div class="loaded__container"></div>
+      </section>
+    </main>
+    <script src="./src/scripts/valuesData.js"></script>
+    <script src="./src/scripts/index.js" type="module"></script>
+  </body>
+</html>
+

@@ -1,0 +1,28 @@
+@media (min-width: 500px){
+  .header__container{
+    max-width: 820px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+    .header__container > div{
+    width: 200px;
+  }
+
+  .finance__container{
+    max-width: 820px;
+  }
+
+  .filter__container{
+    
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .empty__container{
+    max-width: 820px;
+  }
+
+}
